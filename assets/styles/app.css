@@ -1,3 +1,12 @@
 body {
-    background-color: skyblue;
+    background-color: rgb(91, 63, 168);
+}
+header{
+    background-color: rgb(52, 33, 62);
+    
+}
+
+h1{
+    display: flex;
+    justify-content: center;
 }

@@ -1,0 +1,40 @@
+
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+	 <style>
+		.example-wrapper {
+			margin: 1em auto;
+			max-width: 800px;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+		}
+		.example-wrapper code {
+			background: #F5F5F5;
+			padding: 2px 6px;
+		}
+	</style> 
+
+	<div class="example-wrapper">
+		<h1 class="card-title">{{product.name}}</h1>
+
+		<div class="card">
+			<img src="{{product.image}}" class="card-img-top" alt="photo de la patisserie." >
+			<div class="card-body">
+
+				<p class="card-price">
+					prix HT:
+					{{product.price}}euros</p>
+
+				prix TTC:
+				{{product.price*1.2}}euros</p>
+			{% for category in product.categories %}
+				<p class="card-category">catégorie :{{category.label}}</p>
+
+				<a href="{{path('shop_category',{'id' : category.id})}}" class="btn btn-primary">catégorie</a>
+			{% endfor %}
+            </div>
+		</div>
+	</div>
+{% endblock %}
