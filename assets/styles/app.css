@@ -3,10 +3,47 @@ body {
 }
 header{
     background-color: rgb(52, 33, 62);
-    
+    color:aliceblue
+        
 }
 
 h1{
     display: flex;
     justify-content: center;
 }
+
+.nav-item{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.container-registre{
+    display: flex;
+    justify-content: center;
+    gap:10px;
+    color:aliceblue;
+}
+
+th{
+    border:solid 2px;
+    text-align: center;    
+    color:aliceblue;
+    width: 150px;
+    height: 50px;
+}
+tr{
+    border:solid 2px;
+    text-align: center;    
+    color:aliceblue;
+    width: 150px;
+    height: 50px;
+}
+td{
+    border:solid 2px;
+    text-align: center;    
+    color:aliceblue;
+    width: 150px;
+    height: 50px;
+}
+

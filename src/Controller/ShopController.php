@@ -40,10 +40,12 @@ final class ShopController extends AbstractController
     public function category(CategoryRepository $category_repository,$id): Response
     {
         
-        $categories = $category_repository->find($id);            
+        $category = $category_repository->find($id); 
+        $categories = $category_repository->findAll();           
        
         return $this->render('shop/category.html.twig', [
-            'categories' => $categories,
+            'category' => $category,
+            'categories' =>$categories,
         ]);
     }
 }

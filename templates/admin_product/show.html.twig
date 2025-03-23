@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+
+
+{% block body %}
+
+	<div class="container">
+
+		<h1 class="card-title">{{product.name}}</h1>
+
+		<div class="card">
+			<img src="{{product.image}}" class="card-img-top" alt="photo de la patisserie.">
+			<div class="card-body">
+
+				<p class="card-price">prix HT:{{product.price}}euros</p>
+
+				
+				<ul>
+					{% for category in product.categories %}
+						<li>{{ category.label }}</li>
+					{% endfor %}
+
+				</ul>
+			</div>
+		</div>
+	</div>
+{% endblock %}
