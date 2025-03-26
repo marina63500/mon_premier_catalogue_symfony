@@ -1,10 +1,10 @@
-{% extends 'base.html.twig' %}
+{% extends 'base_admin.html.twig' %}
 
 
 {% block title %}Hello AdminProductController!
 {% endblock %}
 
-{% block body %}
+{% block section %}
 	<style>
 		.example-wrapper {
 			margin: 1em auto;
@@ -17,12 +17,33 @@
 			padding: 2px 6px;
 		}
 	</style>
+	<!-- Button trigger modal -->
+	{# <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"> Delete
+									</button> #}
+
+	<!-- Modal -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> <div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="exampleModalLabel">Supprimer</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="text-bg-light">Etes vous sûr de vouloir supprimer cet élément ?</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuler</button>
+					<button type="button" class="btn btn-primary">OK</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 
 	<div class="example-wrapper">
 
-		<section
-			class="container">
-			
+		<section class="container">
+
 			<table>
 				<h1>Produits</h1>
 
@@ -53,34 +74,8 @@
 							</td>
 
 							<td>
-								<a href="{{path('admin_remove_product',{id : product.id})}}" class="btn btn-primary">remove</a>
+								<a href="{{path('admin_remove_product',{id : product.id})}}" class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">remove</a>
 
-
-								<!-- Button trigger modal -->
-									{# <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"> Delete
-								</button> #}
-								<!-- Modal -->
-
-
-								{#<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-									<div class="modal-dialog">
-										<div class="modal-content">
-											<div class="modal-header">
-												<h1 class="modal-title fs-5" id="exampleModalLabel">Supprimer</h1>
-												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-											</div>
-											<div class="modal-body">
-												<p>Etes vous sûr de vouloir supprimer cet élément ?</p>
-											</div>
-											<div class="modal-footer">
-												<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuler</button>
-
-												
-												<button type="button" class="btn btn-primary">OK</button>
-											</div>
-										</div>
-									</div>
-								</div> #}
 
 							</td>
 							<td>

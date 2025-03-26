@@ -25,10 +25,10 @@
 
 				<p class="card-price">
 					prix HT:
-					{{product.price}}euros</p>
+					{{product.price|prix}}</p>
 
 				prix TTC:
-				{{product.price*1.2}}euros</p>
+				{{(product.price * 1.2)|prix}}</p>
 			{% for category in product.categories %}
 				<p class="card-category">catégorie :{{category.label}}</p>
 

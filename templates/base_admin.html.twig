@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Marina's and Anais's Shop
+			{% endblock %}
+		</title>
+		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+		
+
+
+		{% block stylesheets %}{% endblock %}
+
+		{% block javascripts %}
+			{% block importmap %}
+				{{ importmap('app') }}
+			{% endblock %}
+		{% endblock %}
+	</head>
+
+
+	<body>
+        <!-- This is a reverse engineering of the "Hyperspace"
+     design from HTML5 Up! https://html5up.net/hyperspace -->
+
+<main class="main">
+  <aside class="sidebar">
+    <nav class="nav">
+      <ul>
+        <li class="active"><a href="{{path('app_admin')}}">Menu</a></li>
+        <li><a href="{{path('admin_product')}}">Les produits</a></li>
+        <li><a href="{{path('admin_category')}}">Les catégories</a></li>
+        <li><a href="{{path('home_index')}}">Retour</a></li>        
+      </ul>
+    </nav>
+  </aside>
+
+  <section class="twitter">
+  {% block section %}
+    
+    {% endblock %}
+  </section>
+</main> 
+  
+
+
+	</body>
+</html> 
